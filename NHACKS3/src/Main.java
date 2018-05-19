@@ -144,10 +144,14 @@ public class Main extends javax.swing.JFrame {
 
 	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
+		System.out.println("1");
+		
 	}
 
 	private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
+		System.out.println("2");
+		new SpeechToAction(new String [] {jComboBox1.getSelectedItem().toString(), jTextField1.getText(), jTextField2.getText(), jTextField3.getText()}).run();
 	}
 
 	/**
@@ -184,6 +188,7 @@ public class Main extends javax.swing.JFrame {
 		/* Create and display the form */
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				System.out.println("hello world");
 				new Main().setVisible(true);
 			}
 		});
