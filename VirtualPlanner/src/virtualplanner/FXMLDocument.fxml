@@ -1,18 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="virtualplanner.FXMLDocumentController">
     <children>
-        <Button fx:id="button" layoutX="383.0" layoutY="357.0" onAction="#handleButtonAction" text="Tap to speak!" />
+        <Button fx:id="SpeakBtn" layoutX="327.0" layoutY="350.0" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="230.0" text="Tap to speak!">
+         <font>
+            <Font name="Consolas" size="24.0" />
+         </font></Button>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Label fx:id="label1" layoutX="135.0" minHeight="16" minWidth="69" text="Virtual Planner">
+      <Label fx:id="Title" layoutX="135.0" minHeight="16" minWidth="69" text="Virtual Planner">
          <font>
             <Font name="Rockwell" size="96.0" />
          </font>
       </Label>
+      <ComboBox fx:id="EventType" layoutX="51.0" layoutY="220.0" prefWidth="150.0">
+             <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Homework" />
+          <String fx:value="Test" />
+          <String fx:value="Commitment" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+      
+      <Label layoutX="51.0" layoutY="184.0" text="Type of event:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="184.0" text="Event Name:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="415.0" layoutY="184.0" text="Date:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="EventDate" layoutX="408.0" layoutY="220.0" />
+      <TextField fx:id="EventName" layoutX="234.0" layoutY="220.0" />
+      <TextField fx:id="TimeOfEvent" layoutX="618.0" layoutY="220.0" />
+      <Label layoutX="625.0" layoutY="184.0" text="Time:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="427.0" layoutY="263.0" text="PreperationTime:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PrepTime" layoutX="443.0" layoutY="299.0" />
     </children>
 </AnchorPane>

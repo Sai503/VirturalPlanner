@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 /**
@@ -20,6 +21,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
+    private ComboBox comboBox = new ComboBox();
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -27,9 +29,12 @@ public class FXMLDocumentController implements Initializable {
         label.setText("123456789!");
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+
+
     
+    @FXML
+    public void initialize(URL url, ResourceBundle rb) {
+  //  comboBox.getItems().addAll("Homework", "Test", "Commitment");
+    //comboBox.getSelectionModel().select("Homework");
+    }
 }
